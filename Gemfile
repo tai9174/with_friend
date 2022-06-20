@@ -7,7 +7,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'rails', '~> 6.0.3'
 
-gem 'sqlite3', '~> 1.4'
+gem 'pg'
 
 gem 'puma', '~> 4.1'
 
