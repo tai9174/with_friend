@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :login_required, only: [:new, :create]
+
 
   def show
     @user = User.find(params[:id])
@@ -11,7 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-    redirect_to user_path(@user.id)      
+    redirect_to user_path(@user.id)
     else
       render :new
     end
